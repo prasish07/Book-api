@@ -6,8 +6,11 @@ import { errorHandler } from "./middleware/error-handler";
 import { notFound } from "./middleware/not-found";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv"
+import path from "path"
 
-dotenv.config({path:"../.env"});
+// Setting up path
+const absolutePath = path.resolve(__dirname, "../../.env")
+dotenv.config({path: absolutePath})
 
 import router from "./routes/route";
 import UserRouter from "./routes/userRoute"

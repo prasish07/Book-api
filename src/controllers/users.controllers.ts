@@ -38,7 +38,7 @@ export const login = async (req: Request, res: Response) => {
         }
         attachCookiesToResponse({res,tokenPayload});
 
-        res.status(StatusCodes.OK).json({status:"success",msg:"User logged in successfully"});
+        res.status(StatusCodes.OK).json({status:"success",msg:"User logged in successfully",user});
 }
 
 export const getAllUser = async (req: Request, res: Response) => {
